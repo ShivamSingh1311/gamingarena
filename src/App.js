@@ -1,5 +1,11 @@
+import React from "react";
+import Navbar from "./component/common/Navbar";
 function App() {
-  return <h1>app</h1>;
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 }
 
 export default App;
