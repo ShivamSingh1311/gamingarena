@@ -25,9 +25,9 @@ const CardData = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-3 gap-7 ml-36 mt-24 mr-4 ">
+    <div className="grid grid-cols-3 gap-7 pl-36 pt-24 pr-4  ">
       {CardData.map((card, index) => (
-        <div>
+        <div className="transform transition-transform hover:scale-105 cursor-pointer">
           <Card
             key={index}
             imageUrl={card.imageUrl}

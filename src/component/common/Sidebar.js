@@ -2,7 +2,7 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="inline-flex flex-col gap-8  bg-[#149BFC] fixed h-full p-5  text-white py-5 mt-14">
+    <div className="inline-flex flex-col gap-8  bg-[#071952] fixed h-full p-5  text-white py-5 mt-14">
       <ol className="">
         <li className="font-medium ">Category</li>
       </ol>

@@ -4,12 +4,14 @@ const Card = (props) => {
   const { imageUrl, title, description } = props;
   console.log(props);
   return (
-    <div className="">
-      <div className="">
+    <div className="rounded-lg bg-[#b1d389] flex flex-col justify-center gap-5 p-2">
+      <div className="rounded-lg object-contain">
         <img src={imageUrl} alt="N/A" />
       </div>
-      <p>{title}</p>
-      <p>{description}</p>
+      <div>
+        <p className="text-center font-semibold">{title}</p>
+        <p>{description}</p>
+      </div>
     </div>
   );
 };
