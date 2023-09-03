@@ -4,7 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Button } from "@mui/material";
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center px-[200px] bg-[#149BFC] text-white">
+    <div className="flex justify-between items-center px-[200px] bg-[#149BFC] text-white fixed w-[100%]">
       <div>
         <img src="/assets/poketFulNavLogo.svg" alt="na" />
       </div>

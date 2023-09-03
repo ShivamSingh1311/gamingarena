@@ -6,8 +6,11 @@ function App() {
   return (
     <div>
       <Navbar />
+
       <Sidebar />
-      <CardData />
+      <div>
+        <CardData />
+      </div>
     </div>
   );
 }
