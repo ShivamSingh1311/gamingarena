@@ -2,7 +2,12 @@ import React from "react";
 import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigate = useNavigate();
+  const handleHome = (gameId) => {
+    navigate(`/Game`);
+  };
   return (
     <div className="flex justify-between items-center px-[200px] bg-[#071952] text-white fixed w-[100%] z-10">
       <div>
@@ -30,7 +35,9 @@ const Navbar = () => {
         />
       </div>
       <ul className="flex justify-center gap-[32px]">
-        <li>Home</li>
+        <li onClick={handleHome} className="cursor-pointer">
+          Home
+        </li>
         <li>Category</li>
         <li>About</li>
         <li>Pricing</li>
