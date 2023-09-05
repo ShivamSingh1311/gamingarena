@@ -1,18 +1,24 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./component/common/Navbar";
 import Sidebar from "./component/common/Sidebar";
 import Home from "./page/Home";
+import Game from "./page/Game";
 function App() {
   return (
-    <div className="bg-[#CAF7E3]">
-      <Navbar />
+    <Router>
+      <div className="bg-[#F6F1E9]">
+        <Navbar />
 
-      <Sidebar />
-      <div>
-        <Home />
+        <Sidebar />
+        <div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Game/:gameID" element={<Game />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
-
 export default App;
