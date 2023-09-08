@@ -9,6 +9,7 @@ const Home = () => {
     navigate(`/Game/${gameId}`);
     // Navigate to the "Game" page with the game ID as a parameter
   };
+
   return (
     <div className="grid grid-cols-3 gap-7 pl-36 pt-24 pr-4 overflow-y-hidden  ">
       {CardData.map((card, index) => (
@@ -21,6 +22,7 @@ const Home = () => {
             imageUrl={card.imageUrl}
             title={card.title}
             description={card.description}
+            cost={card.cost}
           />
         </div>
       ))}

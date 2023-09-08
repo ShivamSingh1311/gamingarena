@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = ({ imageUrl, title, description, about }) => {
+const Card = ({ imageUrl, title, description, about, cost }) => {
   return (
     <div className="">
       <div className="rounded-lg object-contain">
@@ -9,8 +9,9 @@ const Card = ({ imageUrl, title, description, about }) => {
       <div>
         <p className="text-center font-semibold">{title}</p>
         <p>{description}</p>
+        <p>Rs.{cost}</p>
       </div>
-      <div>{about}</div>
+      <div className="">{about}</div>
     </div>
   );
 };

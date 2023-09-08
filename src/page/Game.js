@@ -10,7 +10,7 @@ const Game = (props) => {
   }
   console.log(card);
   return (
-    <div className="pl-36 pt-24 pr-4 ">
+    <div className="pl-36 pt-24 pr-4 h-screen">
       <div className="">
         <Card2
           key={card.gameId}

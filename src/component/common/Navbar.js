@@ -5,8 +5,8 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate();
-  const handleHome = (gameId) => {
-    navigate(`/Game`);
+  const handleHome = () => {
+    navigate(`/`);
   };
   return (
     <div className="flex justify-between items-center px-[200px] bg-[#071952] text-white fixed w-[100%] z-10">
