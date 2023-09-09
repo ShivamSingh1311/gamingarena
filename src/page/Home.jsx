@@ -14,7 +14,7 @@ const Home = () => {
     <div className="grid grid-cols-3 gap-7 pl-36 pt-24 pr-4 overflow-y-hidden  ">
       {CardData.map((card, index) => (
         <div
-          className="transform transition-transform hover:scale-105 cursor-pointer rounded-lg bg-[#071952] text-white flex flex-col justify-center gap-5 p-2"
+          className="transform transition-transform hover:scale-105 cursor-pointer rounded-lg bg-[#DAC0A3] flex flex-col justify-center gap-5 p-2"
           onClick={() => handleClick(card.gameId)}
         >
           <Card
