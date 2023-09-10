@@ -2,7 +2,7 @@ export const CardData = [
   {
     gameId: "game1",
     imageUrl: "/assets/img1.jpg",
-    title: "Game1",
+    title: "Game1bhcefjkrfrnijernx",
     description: "Game1 description",
     about:
       "Welcome to a vast and immersive gaming experience like no other. Prepare to be transported to a mesmerizing world where endless adventures await. In this epic game, you'll step into the shoes of a legendary hero destined to shape the fate of an entire realm. ",

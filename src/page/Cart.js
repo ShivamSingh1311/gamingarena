@@ -1,8 +1,8 @@
 import React from "react";
 import CardCart from "../component/common/cards/CardCart";
-import { Button } from "@mui/material";
-
+import { useCart } from "../Contexts/CartContext";
 const Cart = () => {
+  const { cartItems, removeFromCart, totalItems, subTotal } = useCart();
   return (
     <div className="flex">
       <div className="pl-36 pt-24  h-screen ">
@@ -10,18 +10,26 @@ const Cart = () => {
         <br />
         <hr className="h-[2px] bg-slate-500"></hr>
         <div className=" ">
-          <CardCart />
-          <CardCart />
+          {cartItems.map((item) => (
+            <CardCart
+              key={item.id}
+              imageUrl={item.imageUrl}
+              title={item.title}
+              description={item.description}
+              cost={item.cost}
+              onRemove={() => removeFromCart(item.id)}
+            />
+          ))}
         </div>
       </div>
       <div className="ml-[180px] mt-[150px] w-[380px] h-[400px] rounded-[12px] bg-[#DAC0A3] ">
         <div className="flex mt-7 ml-8 text-xl text-right">
           <p> Total Items :</p>
-          <p className="ml-[120px]">Items</p>
+          <p className="ml-[120px]">{totalItems}</p>
         </div>
         <div className="flex mt-7 ml-8 text-xl">
           <p> SubTotal :</p>
-          <p className="ml-[140px]">Items</p>
+          <p className="ml-[140px]">{subTotal}</p>
         </div>
         <div className="flex mt-7 ml-8 text-xl">
           <p> Platform Charges :</p>

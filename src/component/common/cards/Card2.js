@@ -7,15 +7,18 @@ import {
 import { Button, Snackbar } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../../../Contexts/CartContext";
 
-const Card2 = ({ imageUrl, title, description, about }) => {
-  const [isAdded, setIfAdded] = useState(false);
-  const [done, setDone] = useState(false);
-  const navigate = useNavigate();
-  const HandleCart = () => {
+const Card2 = ({ imageUrl, title, description, cost, about, id }) => {
+  const { addToCart } = useCart();
+  const HandleAddToCart = () => {
+    addToCart({ id, title, description, cost, imageUrl });
     setIfAdded(true);
     setDone(true);
   };
+  const [isAdded, setIfAdded] = useState(false);
+  const [done, setDone] = useState(false);
+  const navigate = useNavigate();
   const handleClose = () => {
     setDone(false);
   };
@@ -44,7 +47,7 @@ const Card2 = ({ imageUrl, title, description, about }) => {
           <Button
             color="primary"
             aria-label="add to shopping cart"
-            onClick={HandleCart}
+            onClick={HandleAddToCart}
           >
             <AddShoppingCart />
             Add to Cart
@@ -52,6 +55,7 @@ const Card2 = ({ imageUrl, title, description, about }) => {
         )}
 
         <FavoriteBorder />
+        <div>Cost : Rs.{cost}</div>
         <Favorite />
       </div>
       <Snackbar

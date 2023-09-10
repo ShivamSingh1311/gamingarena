@@ -18,6 +18,7 @@ const Game = (props) => {
           title={card.title}
           description={card.description}
           about={card.about}
+          cost={card.cost}
         />
       </div>
     </div>
